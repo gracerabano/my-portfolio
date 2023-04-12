@@ -15,7 +15,10 @@ module.exports = {
       colors: {
         'blossom': '#e3afaf',
         'hippo': '#556774',
-        'light-sky': '#bcd4e4',
+        // 'barely-blue': '#bcd4e4',
+        'powder-blue': '#9fc8d4',
+        'light-sky': '#9ac6e3',
+        'sheer': '#ffffff75',
         
       },
       // backgroundImage: {

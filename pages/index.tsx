@@ -14,13 +14,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-no-repeat bg-cover bg-center bg-fixed bg-[url(/blue-lace.svg)] min-h-screen">
-        <main className="flex flex-row justify-between px-28 py-16 min-h-screen">
+        <main className="container grid grid-cols-12 md:gap-10 justify-between items-center mx-auto px-16 py-16 w-full">
           {/* left */}
-          <div className="w-1/4 flex">
+          <div className="col-span-4">
             <h1 className="text-center text-2xl">Hello World!</h1>
           </div>
           {/* right */}
-          <div className="flex w-3/4">
+          <div className="col-span-8">
             <NavBar/>
           </div>
         </main>
