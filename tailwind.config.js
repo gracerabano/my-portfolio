@@ -1,5 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 const defaultTheme = require('tailwindcss/defaultTheme')
+const fontFamily = require('tailwindcss/defaultTheme')
 
 module.exports = {
   content: [
@@ -11,6 +12,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'sans': ['Poppins', ...defaultTheme.fontFamily.sans],
+        'serif': ['Vollkorn', ...defaultTheme.fontFamily.serif],
       },
       colors: {
         'blossom': '#e3afaf',

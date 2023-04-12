@@ -7,8 +7,8 @@ import styles from "../styles/Home.module.css";
 
 export default function navBar() {
   return (
-    <nav className="flex flex-col ml-auto items-center justify-center px-6 py-2 w-fit h-20 bg-sheer rounded-lg ">
-      <ul className="font-medium flex flex-row items-center justify-center p-2 space-x-8 ">
+    <nav className="flex flex-col ml-auto items-center justify-center px-4 py-2 w-fit h-20 my-2 bg-sheer rounded-lg ">
+      <ul className="font-medium flex flex-row items-center justify-center p-2 space-x-6 ">
         <li>
           <a href="#" className="py-2 px-4 items-center justify-center flex flex-row text-center bg-slate-50 rounded-md text-gray-600 ease-in duration-200 hover:shadow-sm hover:bg-gradient-to-tr from-blossom to-powder-blue hover:text-white"> 
             <span className="mr-2">
