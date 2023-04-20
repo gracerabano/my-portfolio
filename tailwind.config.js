@@ -20,9 +20,17 @@ module.exports = {
         // 'barely-blue': '#bcd4e4',
         'powder-blue': '#9fc8d4',
         'light-sky': '#9ac6e3',
-        'sheer': '#ffffff75',
-        
+        'sheer': '#ffffffa0',
       },
+      animation: {
+        wiggle: 'wiggle 0.5s ease-in-out infinite',
+      },
+      keyframes: {
+        wiggle: {
+          '0%, 100%': { transform: 'rotate(-3deg)' },
+          '50%': { transform: 'rotate(3deg)' },
+        }
+      }
       // backgroundImage: {
       //   'lace': "url('/blue-lace.svg')"
       // }
