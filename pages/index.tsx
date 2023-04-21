@@ -5,15 +5,34 @@ import Head from "next/head";
 import styles from "../styles/Home.module.css";
 import NavBar from "../components/navbar";
 import HomeSection from "../components/pageSections/HomeSection";
+import ResumeSection from "../components/pageSections/ResumeSection";
 import router from "next/router";
-export default function Home() {
+
+interface Props {}
+
+const Home: React.FC<Props> = () => {
+  const [showHomeSection, setShowHomeSection] = useState(true);
+  const [showResumeSection, setShowResumeSection] = useState(false);
+
+  // function to toggle between components
+  const toggleComponent = (component: string) => {
+    if (component === 'HomeSection') {
+      setShowHomeSection(true);
+      setShowResumeSection(false);
+    } else if (component === 'ResumeSection') {
+      setShowHomeSection(false);
+      setShowResumeSection(true);
+    }
+  };
+
   const [isLoaded, setIsLoaded] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
   }, []);
 
-  console.log(router.pathname)
+
+
   return (
     <>
       <Head>
@@ -44,8 +63,8 @@ export default function Home() {
                       </svg>
                     </a>
                     <a href="https://github.com/gracerabano" target="_blank" rel="noopener noreferrer" className="hover:animate-wiggle">
-                      <svg height="40px" viewBox="0 0 72 72" width="40px" xmlns="http://www.w3.org/2000/svg" shape-rendering="geometricPrecision">
-                        <g fill="none" fill-rule="evenodd">
+                      <svg height="40px" viewBox="0 0 72 72" width="40px" xmlns="http://www.w3.org/2000/svg" shapeRendering="geometricPrecision">
+                        <g fill="none" fillRule="evenodd">
                           <path d="M8,72 L64,72 C68.418278,72 72,68.418278 72,64 L72,8 C72,3.581722 68.418278,-8.11624501e-16 64,0 L8,0 C3.581722,8.11624501e-16 -5.41083001e-16,3.581722 0,8 L0,64 C5.41083001e-16,68.418278 3.581722,72 8,72 Z" fill="#7aa6e6"/>
                           <path d="M35.9985,12 C22.746,12 12,22.7870921 12,36.096644 C12,46.7406712 18.876,55.7718301 28.4145,58.9584121 C29.6145,59.1797862 30.0525,58.4358488 30.0525,57.7973276 C30.0525,57.2250681 30.0315,55.7100863 30.0195,53.6996482 C23.343,55.1558981 21.9345,50.4693938 21.9345,50.4693938 C20.844,47.6864054 19.2705,46.9454799 19.2705,46.9454799 C17.091,45.4500754 19.4355,45.4801943 19.4355,45.4801943 C21.843,45.6503662 23.1105,
                           47.9634994 23.1105,47.9634994 C25.2525,51.6455377 28.728,50.5823398 30.096,49.9649018 C30.3135,48.4077535 30.9345,47.3460615 31.62,46.7436831 C26.2905,46.1352808 20.688,44.0691228 20.688,34.8361671 C20.688,32.2052792 21.6225,30.0547881 23.1585,28.3696344 C22.911,27.7597262 22.0875,25.3110578 23.3925,21.9934585 C23.3925,21.9934585 25.4085,21.3459017 29.9925,24.4632101 C31.908,23.9285993 33.96,23.6620468 36.0015,23.6515052 
@@ -56,7 +75,7 @@ export default function Home() {
                     </a>
                     {/* make a <a> tag to GRabano-CS-resume.pdf in public folder */}
                     <a href="GRabano-CS-Resume-4.23.pdf" target="_blank" className="flex justify-center items-center p-1 hover:animate-wiggle rounded-sm bg-blossom h-40px w-40px">
-                      <svg height="28px" width="28px" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd" viewBox="0 0 846.66 846.66" xmlns="http://www.w3.org/2000/svg" stroke="white" strokeWidth={6}>
+                      <svg height="28px" width="28px" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" viewBox="0 0 846.66 846.66" xmlns="http://www.w3.org/2000/svg" stroke="white" strokeWidth={6}>
                         <g id="Layer_x0020_1">
                           <path className="fill-white" d="M187.41 90.79l343.62 0 -14.51 -39.46 -381.58 0 0 663.25 31.83 0 0 -603.15c0,-11.4 9.24,-20.64 20.64,-20.64zm387.56 0l29.03 0c6.2,0 11.76,2.73 15.54,7.05l127.26 125.42c4.1,4.03 6.15,9.35 6.15,14.68l0.06 578.03c0,11.41 -9.25,20.65 -20.65,20.65l-544.95 0c-11.4,0 -20.64,-9.24 -20.64,-20.65l0 -60.1 -52.47 0c-11.4,0 -20.65,-9.24 -20.65,-20.64l0 -704.54c0,-11.41 9.25,-20.65 20.65,-20.65l416.59 0c9.31,0 17.18,6.16 
                             19.75,14.63l24.33 66.12zm-72.78 200.8c-27.15,0 -27.15,-41.29 0,-41.29l107.54 0c27.15,0 27.15,41.29 0,41.29l-107.54 0zm0 163.16c-27.15,0 -27.15,-41.29 0,-41.29l107.54 0c27.15,0 27.15,41.29 0,41.29l-107.54 0zm0 -81.58c-27.15,0 -27.15,-41.29 0,-41.29l107.54 0c27.15,0 27.15,41.29 0,41.29l-107.54 0zm-213.47 285.55c-27.15,0 -27.15,-41.29 0,-41.29l342.33 0c27.16,0 27.16,41.29 0,41.29l-342.33 0zm-80.66 49.56l503.66 0 0 -461.79 -116.1 
@@ -75,11 +94,15 @@ export default function Home() {
           <div className="col-span-8">
               <header className={`w-full transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-y-0 opacity-100" : "-translate-y-10 opacity-0"}`}>
                 {isLoaded && (
-                <NavBar/>
+                  <NavBar onButtonClick={toggleComponent}/>
                 )}
               </header>
-
-          <HomeSection isLoaded={isLoaded}/>
+              <div className={`transform transition-all duration-1000 ${showHomeSection? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} `}>
+                {showHomeSection && <HomeSection isLoaded={isLoaded} />}
+              </div>
+              <div className={`transform transition-all duration-1000 ${showResumeSection? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} `}>
+                {showResumeSection && <ResumeSection isLoaded={isLoaded} />}
+              </div>
 
           </div>
         </div>
@@ -87,3 +110,5 @@ export default function Home() {
     </>
   );
 }
+
+export default Home;
