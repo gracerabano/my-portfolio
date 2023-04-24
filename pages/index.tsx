@@ -48,12 +48,12 @@ const Home: React.FC<Props> = () => {
             <div className={`w-full mt-[120px] relative flex mx-auto items-center justify-center backdrop-blur-md bg-sheer rounded-xl px-16 pb-8 transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
             {isLoaded && (
               <div className="flex flex-col items-center justify-top mx-24  ">
-                <div className="bg-white border border-sheer rounded-2xl shadow-sm">
-                  <img src="/headshot-Cropped.png" alt="avatar" className="h-48 w-48 border-8 border-white rounded-2xl  transform -mt-[50%]" />
+                <div className="bg-slate-50 border border-slate-50 rounded-2xl shadow-sm">
+                  <img src="/headshot-Cropped.png" alt="avatar" className="h-48 w-48 border-8 border-slate-50 rounded-2xl  transform -mt-[50%]" />
                   <h1 className="text-center pb-2 text-2xl font-semibold">Grace Rabano</h1>
                 </div>
 
-                <div className="flex mx-8 mt-4  bg-slate-50 px-4 items-center justify-center py-3 rounded-lg"> 
+                <div className="flex mx-8 mt-4 bg-slate-50 px-4 items-center justify-center py-3 rounded-lg "> 
                   <div className="flex space-x-4 ">
                     <a href="https://www.linkedin.com/in/grace-rabano/" target="_blank" rel="noopener noreferrer" className="hover:animate-wiggle ">
                       <svg fill="currentColor"  height="40px" id="Layer_1" version="1.0" viewBox="0 0 32 32" width="40px" xmlns="http://www.w3.org/2000/svg">
