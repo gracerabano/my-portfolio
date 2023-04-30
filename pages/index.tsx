@@ -42,9 +42,9 @@ const Home: React.FC<Props> = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div className="bg-no-repeat bg-cover bg-center bg-fixed bg-[url(/blue-lace.svg)] min-h-screen">
-        <div className="container grid grid-cols-12 gap-10 justify-center mx-auto my-auto px-16 py-16 w-full">
+        <div className="container grid grid-cols-12 gap-10 justify-between mx-auto my-auto p-16 w-4/6">
           {/* left */}
-          <div className="col-span-4">
+          <div className="col-span-4 sticky">
             <div className={`w-full mt-[120px] relative flex mx-auto items-center justify-center backdrop-blur-md bg-sheer rounded-xl px-16 pb-8 transform transition-all duration-1000 delay-500 ${isLoaded ? "translate-x-0 opacity-100" : "-translate-x-10 opacity-0"}`}>
             {isLoaded && (
               <div className="flex flex-col items-center justify-top mx-24  ">
@@ -74,7 +74,7 @@ const Home: React.FC<Props> = () => {
                       </svg>
                     </a>
                     {/* make a <a> tag to GRabano-CS-resume.pdf in public folder */}
-                    <a href="GRabano-CS-Resume-4.23.pdf" target="_blank" className="flex justify-center items-center p-1 hover:animate-wiggle rounded-sm bg-blossom h-40px w-40px">
+                    <a href="GRabano-CS-Resume-4.23.pdf" target="_blank" className="flex justify-center items-center p-1 hover:animate-wiggle rounded-[4px] bg-blossom h-40px w-40px">
                       <svg height="28px" width="28px" shapeRendering="geometricPrecision" textRendering="geometricPrecision" imageRendering="optimizeQuality" fillRule="evenodd" clipRule="evenodd" viewBox="0 0 846.66 846.66" xmlns="http://www.w3.org/2000/svg" stroke="white" strokeWidth={6}>
                         <g id="Layer_x0020_1">
                           <path className="fill-white" d="M187.41 90.79l343.62 0 -14.51 -39.46 -381.58 0 0 663.25 31.83 0 0 -603.15c0,-11.4 9.24,-20.64 20.64,-20.64zm387.56 0l29.03 0c6.2,0 11.76,2.73 15.54,7.05l127.26 125.42c4.1,4.03 6.15,9.35 6.15,14.68l0.06 578.03c0,11.41 -9.25,20.65 -20.65,20.65l-544.95 0c-11.4,0 -20.64,-9.24 -20.64,-20.65l0 -60.1 -52.47 0c-11.4,0 -20.65,-9.24 -20.65,-20.64l0 -704.54c0,-11.41 9.25,-20.65 20.65,-20.65l416.59 0c9.31,0 17.18,6.16 

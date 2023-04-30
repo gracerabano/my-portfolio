@@ -20,10 +20,10 @@ module.exports = {
         // 'barely-blue': '#bcd4e4',
         'powder-blue': '#9fc8d4',
         'light-sky': '#9ac6e3',
-        'sheer': '#ffffffa0',
+        'sheer': '#ffffffb4',
       },
       animation: {
-        wiggle: 'wiggle 0.5s ease-in-out infinite',
+        wiggle: 'wiggle 0.4s ease-in-out infinite',
       },
       keyframes: {
         wiggle: {
